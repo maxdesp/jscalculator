@@ -1,0 +1,78 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description"
+	content="HTML/CSS/JS Calculator">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="styles/calc.css">
+<link rel="icon" type="image/png" href="img/icon.png">
+<script src="js/calc.js"></script>
+<title>JSCalculator</title>
+</head>
+
+<body>
+
+	<header>
+    <img class="logo" src="img/icon.png"
+      alt="logo" height="50" width="50">
+    <span class="title"> JSCalculator </span>
+	</header>
+
+
+	<section class=mainBody id=bodID>
+
+	<div class="content">
+    <div class="mainCalc" id="mainId">
+
+    <input class="inField" id= "inFieldId" type="text" name="nom" value="" readonly>
+
+    <table class="calc">
+  	<tr>
+  		<td><div class="button func" id="buttonParO" onclick="back()">←</div></td>
+  		<td><div class="button func" id="buttonParC" onclick="oppose();setText(this.innerText)">±</div></td>
+  		<td><div class="button func" id="buttonPer" onclick="parse(this);setText(this.innerText)">%</div></td>
+      <td><div class="button func" id="buttonPlu" onclick="parse(this);setText(this.innerText)">+</div></td>
+  	</tr>
+  	<tr>
+  		<td><div class="button" id="button1"  onclick="parse(this);setText(this.innerText)">1</div></td>
+  		<td><div class="button" id="button2" onclick="parse(this);setText(this.innerText)">2</div></td>
+  		<td><div class="button" id="button3" onclick="parse(this);setText(this.innerText)">3</div></td>
+  		<td><div class="button func" id="buttonMin" onclick="parse(this);setText(this.innerText)">-</div></td>
+  	</tr>
+  	<tr>
+  		<td><div class="button" id="button4" onclick="parse(this);setText(this.innerText)">4</div></td>
+  		<td><div class="button" id="button5" onclick="parse(this);setText(this.innerText)">5</div></td>
+  		<td><div class="button" id="button6" onclick="parse(this);setText(this.innerText)">6</div></td>
+  		<td><div class="button func" id="buttonX" onclick="parse(this);setText(this.innerText)">*</div></td>
+  	</tr>
+  	<tr>
+  		<td><div class="button" id="button7"  onclick="parse(this);setText(this.innerText)">7</div></td>
+  		<td><div class="button" id="button8"  onclick="parse(this);setText(this.innerText)">8</div></td>
+  		<td><div class="button" id="button9"  onclick="parse(this);setText(this.innerText)">9</div></td>
+      <td><div class="button func" id="buttonDiv" onclick="parse(this);setText(this.innerText)">/</div></td>
+
+  	</tr>
+  	<tr>
+  		<td><div class="button" id="button0" onclick="parse(this);setText(this.innerText)">0</div></td>
+  		<td><div class="button" id="buttonComma" onclick="parse(this);setText(this.innerText)">.</div></td>
+  		<td><div class="button buttonEqual" onclick="equals();setText(this.innerText)">=</div></td>
+  		<td><div class="button buttonCE" onclick="clearText()">CE</div></td>
+  	</tr>
+  	</table>
+
+
+    </div><!--  mainCalc -->
+  <span class="infos" id="infos"> Message d'erreur </span>
+  </div>  <!-- content> -->
+
+</section> <!-- mainBody -->
+
+
+	<footer class="mainFooter">
+  <span class="footerText">© Double Max 2017</span>
+	</footer>
+
+</body>
+</html>
