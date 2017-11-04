@@ -1,0 +1,181 @@
+body{
+	font-family: "Rubik";
+	background-color:#fdf7f0;
+}
+
+/* ####################### HEADER ################### */
+
+header {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 4em;
+    line-height: 2em;
+    background-color: #331e38;
+    z-index: 98;
+    overflow:hidden;
+    display: inline-block;
+}
+
+
+.title{
+	font-size:1.5em;
+	color:white;
+	float:right;
+	margin-right: 45%;
+	margin-top: 10px;
+}
+
+.logo{
+   border-radius: 0%;
+   margin: 0.5em;
+   -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+
+}
+.logo:hover {
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+/* ##################### CONTENT  ################### */
+
+/* Main content */
+.mainBody{
+    padding-bottom: 7.143em;
+    border:0.071em solid #CCC;
+    border-bottom:0.2em solid #CCC;
+}
+
+.content {
+    margin: auto;
+    margin-top: 3.571em;
+    padding: 3.571em;
+
+}
+
+
+/* ##################### CALCULATOR  ################### */
+
+.calc{
+	margin:auto;
+}
+
+.mainCalc{
+   box-shadow: 10px 10px 5px #888888;
+   width: 20em;
+   border:1px solid grey;
+   border-radius : 10px;
+   padding:20px;
+   margin:auto;
+   text-align:center;
+   background-image:linear-gradient(60deg, #d6ccab , #f4e8c1);
+   margin-bottom: 30px;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+
+.inField{
+	width: 18em;
+	height:5em;
+	border:1px solid grey;
+	border-radius: 5px;
+	margin-bottom:10px;
+	padding-right:20px;
+	text-align: right;
+	color: transparent;
+	text-shadow: 0 0 0 #331E38;
+}
+
+
+
+
+.mainCalc.shakeMain {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* message info box*/
+.infos{
+	background-color:#fbf692;
+	border:1px solid #E8DCB8;
+	border-radius:6px;
+	width:20em;
+	margin:auto;
+	text-align:center;
+	padding:10px;
+	visibility:hidden;
+	display: block;
+}
+
+/* ##################### BUTTONS   ################### */
+
+.button{
+	padding-top: 10px;
+	background-color:#a0c1b9;
+	border-radius:5px;
+	width:60px;
+	position:relative;
+	width: 4em;
+	height: 2em;
+	margin: 3px;
+	display: block;
+	line-height:1.5em;
+	text-align:center;
+	text-decoration:none;
+	cursor:pointer;
+	transition: all .3s linear;
+	}
+
+
+/*functional buttons*/
+.button.func{
+	background-color:#708e87;
+	background-image:linear-gradient(60deg, #87a59e , #708e87);
+}
+
+.button.buttonEqual, .buttonCE{
+	/* background-color:#331E38; */
+	background-image:linear-gradient(60deg, #5f3b68 , #331E38);
+	color:white;
+}
+
+/* button animations */
+.button:active {
+    box-shadow: 0 2px 0 #006599;
+    transform: translateY(3px);
+}
+.button:hover {
+    opacity: .7;
+}
+
+/* ##################### FOOTER   ################### */
+footer {
+  color: white;
+	position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 2em;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+	background-color:#331e38;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+
+/* ##################### ANIMATIONS   ################### */
+
+
+
+/* animate calculator  on error */
+/* src : https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
+
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% {transform: translate3d(2px, 0, 0);}
+  30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+  40%, 60% { transform: translate3d(4px, 0, 0); }
+}
